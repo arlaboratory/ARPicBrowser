@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ARPicBrowser!</string>
+    <string name="app_name">ARPicBrowser</string>
+    <string name="JsonUrl">http://www.panoramio.com/map/get_panoramas.php?</string>
+    <string name="google_map_api_key">05oqwRYOkWQs917VnkN0mWzLn4sxMRqN4-cSeHg</string>
+    <string name="kingOfPhotos">public</string>
+    <string name="normalResolution">small</string>
+    <string name="originalResolution">original</string>
+    <string name="maxNPhotos">20</string>
+    <string name="share">Share</string>
+
+    <string name ="image"> image</string>
+    <string name ="images"> images</string>
+    <string name="watchimage"></string>
+</resources>

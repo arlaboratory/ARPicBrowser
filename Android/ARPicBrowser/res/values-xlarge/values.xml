@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="leftMarginSeekBar">100dp</dimen>
+    <dimen name="rightMarginSeekBar">100dp</dimen>
+    <dimen name="leftMarginRefreshBtnFilters">170dp</dimen>
+    <dimen name="leftMargintxttitleInfoExtend">20dp</dimen>
+    <dimen name="rightMargintxttitleInfoExtend">20dp</dimen>
+    <dimen name="leftMarginBtnInfoExtend">30dp</dimen>
+    <dimen name="txtSizetxttitleInfoExtend">30dp</dimen>
+<dimen name="splashMargin">60dp</dimen>
+</resources>
