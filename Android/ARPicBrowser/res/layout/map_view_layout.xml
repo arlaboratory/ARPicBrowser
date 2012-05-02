@@ -9,7 +9,7 @@
         android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:apiKey="HERE_YOUR_MAP_API_KEY"
+        android:apiKey="0l_huu57FM0uLZNHg7aI38kqinKzX57OZ_z2lkg"
         android:clickable="true" />
 <!-- "@string/google_map_api_key" -->
 </LinearLayout>

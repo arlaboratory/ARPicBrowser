@@ -43,6 +43,8 @@ public class ARViewActivity extends Activity implements UpdateJsonDataChangeList
 	@Override
 	protected void onResume() {
 		super.onResume();
+		aRbrowserView.ResumeArView();
+		
 		Intent intent = TabBarProjectActivity.tabBar.getIntent();
 
 		if (intent != null && intent.getData() != null) {
@@ -53,9 +55,10 @@ public class ARViewActivity extends Activity implements UpdateJsonDataChangeList
 			}
 		}
 		UpdateJsonData.setUpdateListener(this);
-
 		loadData();
 	}
+	
+	
 	/**
 	 * Loads the Panoramio points into the browser
 	 */
@@ -100,7 +103,7 @@ public class ARViewActivity extends Activity implements UpdateJsonDataChangeList
 				aRbrowserView.addPoiToRenderList(mPoi);
 			}
 			}
-			aRbrowserView.ResumeArView();
+			
 		}
 	}
 
@@ -139,7 +142,6 @@ public class ARViewActivity extends Activity implements UpdateJsonDataChangeList
 	}
 
 	public void update() {
-		aRbrowserView.PauseArView();
 		loadData();
 	}
 	@Override
