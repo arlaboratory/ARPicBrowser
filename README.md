@@ -23,12 +23,13 @@ Devices tested:
 * HTC Desire
 * HTC Wildfire S
 * HTC Flyer
+* HTC Incredible
+* HTC  Eris with 4.0 root installed
 * Google Nexus one
 * Samsung Galaxy S
 * Samsung Galaxy S II
 * Samsung Nexus
-* Samsung Tab 8.9
-* Samsung Tab 10.1
+* Samsung Note
 * LG Optimus 3D
 * Sony Ericsson Xperia Play
 
@@ -41,6 +42,7 @@ Devices tested:
 * iPhone 4
 * iPhone 4S
 * iPad 2
+* New iPad
 
 ******************
     License 
