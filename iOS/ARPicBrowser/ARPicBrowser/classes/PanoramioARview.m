@@ -100,7 +100,7 @@
         Poi* poi = [[Poi alloc] init];
         [poi setLocation:[[CLLocation alloc]initWithLatitude:panObj.location.coordinate.latitude longitude:panObj.location.coordinate.longitude]];
         [poi setIconPath:small];
-        [poi setAltitude:1];
+        [poi setAltitudeInDegrees:1];
         [poi setTitle:panObj.title];
         NSMutableDictionary* actions = [[NSMutableDictionary alloc] initWithObjectsAndKeys:panObj.imageUrl,POI_ACTION_PHOTO,[NSString stringWithFormat:@"%f,%f",poi.location.coordinate.latitude,poi.location.coordinate.longitude],POI_ACTION_MAP,panObj.imageUrl,POI_ACTION_TWITTER, nil];
         [poi setActionsDict:actions];

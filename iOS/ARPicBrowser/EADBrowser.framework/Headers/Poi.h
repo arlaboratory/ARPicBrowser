@@ -76,23 +76,29 @@ typedef enum  {
      @brief _poiDescriptionColor: description font color
      */
     UIColor* _poiDescriptionColor;
+
+    /**
+     @brief _uId: unique ID of the POI
+     */
+    int _uId;
     
     /**
-     @brief _actionsDict: A NSDictinary can have the following keys and values:
-     POI_ACTION_CALL with “123456” will call phone “123456”
-     POI_ACTION_WEBLINK with “www.google.com” will open “www.google.com” web page
-     POI_ACTION_EMAIL with “mail@address.com” will open the mail forum to send email to address “mail@address.com”
-     POI_ACTION_SMS with “123456” will send sms to phone number “123456”
-     POI_ACTION_PHOTO with “www.url.com/of/photo.jpg” will open the photo viewer with the photo.jpg in full screen
-     POI_ACTION_AUDIO with “www.url.com/of/audio.mp3” will play the audio file audio.mp3
-     POI_ACTION_VIDEO with “www.url.com/of/video.m4p” will play the video full screen
-     POI_ACTION_FACEBOOK with “nice!” will share the info of the poi (title, description and photo) with the text “nice!” on the user's facebook wall
-     POI_ACTION_TWITTER with “nice!” will share the info of the poi (title, description and photo) with the text “nice!” on the user's twitter account
-     POI_ACTION_MAP with “34.4,36.77” will show the user the map with directions from the user's location to latitude: 34.4 and longitude 36.77
+     @brief _actionsDict: A NSDictinary can have the following keys and values:<br>
+     POI_ACTION_CALL with “123456” will call phone “123456”<br>
+     POI_ACTION_WEBLINK with “www.google.com” will open “www.google.com” web page<br>
+     POI_ACTION_EMAIL with “mail@address.com” will open the mail forum to send email to address “mail@address.com”<br>
+     POI_ACTION_SMS with “123456” will send sms to phone number “123456”<br>
+     POI_ACTION_PHOTO with “www.url.com/of/photo.jpg” will open the photo viewer with the photo.jpg in full screen<br>
+     POI_ACTION_AUDIO with “www.url.com/of/audio.mp3” will play the audio file audio.mp3<br>
+     POI_ACTION_VIDEO with “www.url.com/of/video.m4p” will play the video full screen<br>
+     POI_ACTION_FACEBOOK with “nice!” will share the info of the poi (title, description and photo) with the text “nice!” on the user's facebook wall<br>
+     POI_ACTION_TWITTER with “nice!” will share the info of the poi (title, description and photo) with the text “nice!” on the user's twitter account<br>
+     POI_ACTION_MAP with “34.4,36.77” will show the user the map with directions from the user's location to latitude: 34.4 and longitude 36.77<br>
      */
     NSMutableDictionary* _actionsDict;
 }
 
+@property int uId;
 @property double altitude;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSString* description;
@@ -103,6 +109,13 @@ typedef enum  {
 @property (nonatomic, strong) UIColor* poiDescriptionColor;
 @property (nonatomic, strong) NSMutableDictionary* actionsDict;
 @property (nonatomic, strong) CLLocation* location;
+
+
+/**
+ @brief set poi altitude in degrees
+ @param degree: a degree of the poi from the user location. raging from -45 to 45 degrees
+ */
+-(void) setAltitudeInDegrees:(double)degree;
 
 @end
 

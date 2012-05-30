@@ -16,9 +16,11 @@ class AES{
 
         AES(bool _debug);
     
-        bool ApiChk(char*_ak, char*_k, char*_d);
+        char* ApiChk(char*_ak, char*_k, char*_d);
 
         char* base64(const unsigned char *input, int length);
+    
+        char *pt(unsigned char *md);
     
     private:
     

@@ -11,10 +11,11 @@
 
 @interface WSstatusController : NSObject <NSURLConnectionDelegate>
 
-- (BOOL)Register;
+- (void)Register;
 
 @property (strong, nonatomic) NSString* appKey;
 @property (strong, nonatomic) NSString* productId;
+@property (strong, nonatomic) NSString* productKey;
 
 @end
 

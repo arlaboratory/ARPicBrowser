@@ -29,9 +29,9 @@ public class ARViewActivity extends Activity implements UpdateJsonDataChangeList
 		super.onCreate(savedInstanceState);
 		
         if(isTablet())
-        	aRbrowserView = new ARbrowserView(this,true,ARBROWSERAPIKEY, ARbrowserView.SCREEN_ORIENTATION_LANDSCAPE, true);
+        	aRbrowserView = new ARbrowserView(this,ARbrowserView.UI_ORIENTATION_ALL,ARBROWSERAPIKEY, ARbrowserView.SCREEN_ORIENTATION_LANDSCAPE, true, true);
         else
-        	aRbrowserView = new ARbrowserView(this,true,ARBROWSERAPIKEY, ARbrowserView.SCREEN_ORIENTATION_PORTRAIT, false);
+        	aRbrowserView = new ARbrowserView(this,ARbrowserView.UI_ORIENTATION_ALL,ARBROWSERAPIKEY, ARbrowserView.SCREEN_ORIENTATION_PORTRAIT, false, true);
        
 		aRbrowserView.setPoiSize(2.0f);
 		aRbrowserView.setTwitterAppCredentials("YOURCONSUMERKEY", "YOURCONSUMERSECRET", "callback", "panoramioTwitter");
