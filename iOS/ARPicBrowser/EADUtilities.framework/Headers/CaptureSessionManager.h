@@ -6,10 +6,20 @@
 - (void)processNewCameraFrame:(CVImageBufferRef)cameraFrame;
 @end
 
-@interface CaptureSessionManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
+__attribute__((__visibility__("default"))) @interface CaptureSessionManager : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate> {
     
     
 }
+
+//NSString *const AVCaptureSessionPresetPhoto;
+//NSString *const AVCaptureSessionPresetHigh;
+//NSString *const AVCaptureSessionPresetMedium;
+//NSString *const AVCaptureSessionPresetLow;
+//NSString *const AVCaptureSessionPreset352x288;
+//NSString *const AVCaptureSessionPreset640x480;
+//NSString *const AVCaptureSessionPresetiFrame960x540;
+//NSString *const AVCaptureSessionPreset1280x720;
+//NSString *const AVCaptureSessionPresetiFrame1280x720;
 
 @property (strong,nonatomic) AVCaptureVideoPreviewLayer *previewLayer;
 @property (strong,nonatomic) AVCaptureSession *captureSession;
@@ -21,5 +31,7 @@
 - (void)addVideoOutput;
 - (void)addVideoPreviewLayer;
 
-@end
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
++ (UIInterfaceOrientation)getInterfaceOrientationFromDeviceOrientation:(UIDeviceOrientation)dOrientation;
 
+@end

@@ -30,7 +30,7 @@ typedef enum  {
 /**
  @brief Represents a POI. The object has the POI's GPS coordinates, altitude, title, short text description and an icon that will be shown in the popups. The font's size and color of the texts in the popups can be set too.
 */
-@interface Poi : NSObject
+__attribute__((__visibility__("default"))) @interface Poi : NSObject
 {
     /**
      @brief _altitude: Height of the poi. Values between -45 and 45.
@@ -56,6 +56,15 @@ typedef enum  {
      @brief _iconPath: image icon of the poi
      */
     UIImage* _iconPath;
+    
+    /**
+     @brief _alpha: alpha of the poi
+     */
+    double _selectedAlpha;
+    /**
+     @brief _alpha: none alpha of the poi
+     */
+    double _notSelectedAlpha;
     
     /**
      @brief _poiTitleFont: title font
@@ -103,6 +112,8 @@ typedef enum  {
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSString* description;
 @property (nonatomic, strong) UIImage* iconPath;
+@property (nonatomic, assign) double selectedAlpha;
+@property (nonatomic, assign) double notSelectedAlpha;
 @property (nonatomic, strong) UIFont* poiTitleFont;
 @property (nonatomic, strong) UIFont* poiDescriptionFont;
 @property (nonatomic, strong) UIColor* poiTitleColor;
@@ -110,12 +121,15 @@ typedef enum  {
 @property (nonatomic, strong) NSMutableDictionary* actionsDict;
 @property (nonatomic, strong) CLLocation* location;
 
+-(id) init;
 
 /**
  @brief set poi altitude in degrees
  @param degree: a degree of the poi from the user location. raging from -45 to 45 degrees
  */
 -(void) setAltitudeInDegrees:(double)degree;
+
+-(BOOL) setIconFromUrl:(NSURL*)urlPath;
 
 @end
 

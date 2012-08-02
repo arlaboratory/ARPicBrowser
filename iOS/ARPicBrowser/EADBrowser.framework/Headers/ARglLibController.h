@@ -25,7 +25,7 @@ typedef enum  {
 
 
 @protocol ARLibProtocol <NSObject>
-
+@optional
 /**
  @brief Callback called with the user touches a poi
  Use this callback to implement custom UI, events or actions when the POI's clicked by the user
@@ -42,7 +42,7 @@ typedef enum  {
 
 @end
 
-@interface ARglLibController : UIViewController
+__attribute__((__visibility__("default"))) @interface ARglLibController : UIViewController
 
 /**
  @brief Initializes ARglLibController

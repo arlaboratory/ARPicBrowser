@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AES.h"
 
-@interface WSstatusController : NSObject <NSURLConnectionDelegate>
+__attribute__((__visibility__("default"))) @interface WSstatusController : NSObject <NSURLConnectionDelegate>
 
 - (void)Register;
 

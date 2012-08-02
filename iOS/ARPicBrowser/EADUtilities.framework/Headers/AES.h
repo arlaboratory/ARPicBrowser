@@ -14,9 +14,9 @@ class AES{
 
         AES(void);
 
-        AES(bool _debug);
+        __attribute__((__visibility__("default"))) AES(bool _debug);
     
-        char* ApiChk(char*_ak, char*_k, char*_d);
+        __attribute__((__visibility__("default"))) char* ApiChk(char*_ak, char*_k, char*_d);
 
         char* base64(const unsigned char *input, int length);
     
